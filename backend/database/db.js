@@ -5,7 +5,7 @@ async function connectionMySql(){
             host: 'localhost',
             port: '3306',
             user: 'root',
-            password: 'Oufreds2s2-',
+            password: 'root',
             database: 'users'
         })
         
