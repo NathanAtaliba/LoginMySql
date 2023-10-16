@@ -1,23 +1,15 @@
 import { Router } from "express";
-
+import { getUsers, createUser, updateUser, deleteUser } from "../controllers/usersControllers";
 const routes =  Router();
 
-routes.get('/users',( req, res ) => {
-    console.log('Foi feito um get');
-    res.send('OK');
-})
-routes.post('/users',( req, res ) => {
-    console.log('Foi feito um post');
-    res.send('OK');
-})
-routes.put('/users',( req, res ) => {
-    console.log('Foi feito um put');
-    res.send('OK');
-})
-routes.delete('/users',( req, res ) => {
-    console.log('Foi feito um delete');
-    res.send('OK');
-})
+routes.get('/users', getUsers )
+
+routes.post('/users', createUser )
+
+routes.put('/users', updateUser)
+
+routes.delete('/users',deleteUser)
+
 
 export default routes;
 

@@ -8,14 +8,13 @@ async function connectionMySql(){
             password: 'root',
             database: 'users'
         })
-        
-        connection.connect((err) => {
-            if (err) {
-                console.error('Error connecting to database:', err);
-                return;
-            }
-            console.log('Connected to database');
-        });
-}
+        try{
+            connection.connect()
+            return true
+        }catch(error){
+            console.log("Erro:" + error)
+            return false
+        }
+    }
 
 export default connectionMySql;
