@@ -1,5 +1,5 @@
 import express from 'express';
-import connectionMySql from '../database/db.js';
+import connectionMySql from './database/db.js';
 import cors from 'cors';
 import routes from './routes.js';
 
