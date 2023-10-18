@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon backend/src/index.js",
+    "start": "nodemon backend/src/server.js",
     "test": "mocha backend/test"
   },
   "author": "",
@@ -19,5 +19,8 @@
     "mocha": "^10.2.0",
     "mysql2": "^3.6.1",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.3"
   }
 }

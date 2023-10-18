@@ -5,9 +5,10 @@
 ### Nathan Santos Ataliba
 
 ## Comandos para utilização do projeto:
+````git clone [https]````
 
-- git clone [https]
-- npm install
-- npm run start
+````npm install````
+
+````npm run start````
 
 
