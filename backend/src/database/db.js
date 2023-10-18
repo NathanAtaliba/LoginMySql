@@ -1,15 +1,16 @@
 import mysql from 'mysql2';
+import dotenv from 'dotenv';
 
-function connectionMySql(){
-        const connection =  mysql.createConnection({
-            host: 'localhost',
-            port: '3306',
-            user: 'root',
-            password: 'root',
-            database: 'users'
+async function connectionMySql(){
+    dotenv.config();    
+    try{
+    const connection = mysql.createPool({
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_DATABASE
         });
-
-        try{
             connection.connect();
             console.log('Conectado ao MySQL com o ID ' + connection.connect(callback));
             return true;
