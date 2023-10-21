@@ -6,10 +6,9 @@ routes.get('/users', getUsers )
 
 routes.post('/users', createUser )
 
-routes.put('/users', updateUser)
+routes.put('/users/:email', updateUser)
 
-routes.delete('/users',deleteUser)
-
+routes.delete('/users/:email',deleteUser)
 
 export default routes;
 

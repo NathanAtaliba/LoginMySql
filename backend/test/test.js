@@ -10,7 +10,7 @@ describe('Users tests: ',()=>{
     });
     
     it('Teste de busca de usuarios', async() => {
-        const response = await request(app).get('/users')
+        const response = await request(app).get('http://localhost:3000/users')
         expect(response.status).toBe(200);
     })
 })

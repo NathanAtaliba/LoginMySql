@@ -2,7 +2,7 @@ import { connection } from "../database/db.js";
 // FUNÇÕES DE INTEGRAÇÃO
 function getUsers( req, res ){
   try {     
-    const q = 'SELECT * FROM users ';
+    let q = 'SELECT * FROM users ';
     connection.query(q, function(err, results) {
     if (err) {
       console.error('Erro ao executar a consulta: ' + err);
@@ -19,15 +19,64 @@ function getUsers( req, res ){
       }
 }
 
-async function createUser(){    
-     
+function createUser(req , res){
+  try {
+    let email = req.body.email;
+    let password = req.body.password;
+    let q = `INSERT INTO users (email, senha) VALUES('${email}', '${password}')`;
+    connection.query(q, function(err){
+      if (err) {
+        console.error('Error creating user: ' + err);
+        return res.status(500).send('Erro no servidor.');
+      }
+      else {
+        return res.status(201).json('User created sucessfully');
+    }  
+    });
+  } catch (error) {
+      console.error('Erro na função createUser: ' + error);
+      return res.status(500).send('Erro no servidor.');
+  }
+  }
+
+function deleteUser(req , res){
+  try {
+    let email = req.params;
+    let q = `DELETE FROM users WHERE email = '${email.email}'`;
+    console.log(q);
+    connection.query( q, function(err){
+      if (err) {  
+        console.error('Error deleting user: ' + err);
+        return res.status(500).send('Erro no servidor.');
+      }
+      else {
+        return res.status(201).json('User deleted sucessfully');
+      }  
+      });
+  } catch (error) {
+     console.error('Erro na função deleteUser: ' + error);
+     return res.status(500).send('Erro no servidor.');
+  }
 }
 
-async function deleteUser(){
-}
-
-async function updateUser(){
-    
+function updateUser(req, res){
+  try {
+    let email = req.params;
+    let password = req.body.password;
+    let q = `UPDATE users SET senha = '${password}' WHERE email = '${email.email}'`;
+    connection.query( q, function(err){
+      if (err) {  
+        console.error('Error updating user: ' + err);
+        return res.status(500).send('Erro no servidor.');
+      }
+      else {
+        return res.status(201).json('User updating sucessfully');
+      }  
+      });
+  } catch (error) {
+     console.error('Erro na função updateUser: ' + error);
+     return res.status(500).send('Erro no servidor.');
+  }
 }
 
 async function searchUser(){
@@ -36,7 +85,6 @@ async function searchUser(){
 
 // FUNÇÕES UNITARIAS
 function verificaEmail(newEmail){
-
 
 }
 
