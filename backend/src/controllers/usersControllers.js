@@ -43,14 +43,13 @@ function deleteUser(req , res){
   try {
     let email = req.params;
     let q = `DELETE FROM users WHERE email = '${email.email}'`;
-    console.log(q);
     connection.query( q, function(err){
       if (err) {  
         console.error('Error deleting user: ' + err);
         return res.status(500).send('Erro no servidor.');
       }
       else {
-        return res.status(201).json('User deleted sucessfully');
+        return res.status(200).json('User deleted sucessfully');
       }  
       });
   } catch (error) {
@@ -70,7 +69,7 @@ function updateUser(req, res){
         return res.status(500).send('Erro no servidor.');
       }
       else {
-        return res.status(201).json('User updating sucessfully');
+        return res.status(200).json('User updating sucessfully');
       }  
       });
   } catch (error) {

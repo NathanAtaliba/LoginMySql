@@ -22,8 +22,4 @@ app.use((req, res, next) => {
   
 app.use(cors());
 
-app.listen(port, () => {
-    console.log(`Server listenin in the port = ${port}`) 
-});
-
-export default { app };
+export default app;
