@@ -56,8 +56,28 @@
     font-size: 2rem;
     background-color: #252bd1;
     padding: 10px 50px;
+    margin: 5px;
 }
+
 .btn-login:hover{
+    color: black;
+    border: 2px solid black;
+    font-size: 2.1rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn-create{
+    color:#fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: #252bd1;
+    margin: 5px;
+    padding: 10px 50px;  
+}
+
+.btn-create:hover{
     color: black;
     border: 2px solid black;
     font-size: 2.1rem;
