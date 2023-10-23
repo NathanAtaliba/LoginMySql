@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { getUsers, createUser, updateUser, deleteUser } from "./controllers/usersControllers.js";
+import { getUsers, createUser, updateUser, deleteUser, searchUser } from "./controllers/usersControllers.js";
 const routes =  Router();
 
 routes.get('/users', getUsers )
+
+routes.get('/user', searchUser )
 
 routes.post('/users', createUser )
 

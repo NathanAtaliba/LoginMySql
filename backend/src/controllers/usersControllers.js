@@ -43,13 +43,17 @@ function deleteUser(req , res){
   try {
     let email = req.params;
     let q = `DELETE FROM users WHERE email = '${email.email}'`;
-    connection.query( q, function(err){
+    connection.query( q, function(err, results){
       if (err) {  
         console.error('Error deleting user: ' + err);
         return res.status(500).send('Erro no servidor.');
       }
       else {
-        return res.status(200).json('User deleted sucessfully');
+        if(results.affectedRows){
+          return res.status(200).json('User deleted sucessfully');
+        }else{
+          return res.status(404).json(`User not found`);
+        }
       }  
       });
   } catch (error) {
@@ -63,13 +67,17 @@ function updateUser(req, res){
     let email = req.params;
     let password = req.body.password;
     let q = `UPDATE users SET senha = '${password}' WHERE email = '${email.email}'`;
-    connection.query( q, function(err){
+    connection.query( q, function(err, results){
       if (err) {  
         console.error('Error updating user: ' + err);
         return res.status(500).send('Erro no servidor.');
       }
       else {
-        return res.status(200).json('User updating sucessfully');
+        if(results.changedRows){
+          return res.status(200).json('User updating sucessfully');
+        }else{
+          return res.status(404).json('User not found');
+        }
       }  
       });
   } catch (error) {
@@ -78,13 +86,29 @@ function updateUser(req, res){
   }
 }
 
-async function searchUser(){
-    
+async function searchUser(req, res){
+  try {
+    const email = req.body.email;
+    const q = `SELECT * FROM users WHERE email = '${email}'`;
+    connection.query( q, function(err, results){
+      if (err) {  
+        console.error('Error updating user: ' + err);
+        return res.status(500).send('Erro no servidor.');
+      }
+      else {
+          return res.status(200).json(results.info);
+        }
+      });
+  } catch (error) {
+     console.error('Erro na função updateUser: ' + error);
+     return res.status(500).send('Erro no servidor.');
+  }
 }
 
 // FUNÇÕES UNITARIAS
 function verificaEmail(newEmail){
-
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(newEmail);
 }
 
-export {getUsers, updateUser, deleteUser, createUser}
+export {getUsers, updateUser, deleteUser, createUser, searchUser, verificaEmail}
