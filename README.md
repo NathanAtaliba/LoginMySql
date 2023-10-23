@@ -7,9 +7,13 @@
 ## Comandos para utilização do projeto:
  - Crie um arquivo .env e coloque as seguintes variaveis de acordo com sua configuração:
     DB_HOST= SeuHost
+
     DB_PORT= SuaPorta
+
     DB_USER= SeuUser
+
     DB_PASS= SuaSenha
+    
     DB_DATABASE= SeuDatabase
 
 ````git clone [https]````
