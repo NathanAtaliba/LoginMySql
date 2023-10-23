@@ -9,7 +9,7 @@ function getUsers( req, res ){
       return res.status(500).send('Erro no servidor.');
     }
     else {
-      const users = results;
+      let users =  results;
       return res.status(200).json(users);
     }  
     });
