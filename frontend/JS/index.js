@@ -16,8 +16,8 @@ function loginUser(){
     .then(async (results)=> {
         const users = await results.json();
         let found = false;
-        for (const element of users){
-            if(element.email == email.value && element.password == password.value){
+        for (let element of users){
+            if((element.email == email.value) && (element.senha == password.value)){
                 found = true;
                 break;
             }
@@ -27,9 +27,10 @@ function loginUser(){
         }
         reset();
         if(found == true){
-            alert('User found!')
+            alert('User found!');
+            window.location.assign('../logado.html');
         }else{
-            alert('User not found!')
+            alert('User not found!');
         }
     })
     .catch((error) => {
