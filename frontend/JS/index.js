@@ -1,9 +1,14 @@
 let email = document.getElementById("email");
 let password = document.getElementById("password");
+let activeTokens = {};
 
 function reset(){
     email.value = '';
     password.value = '';
+}
+
+function generateToken(){
+    return Math.random().toString(36).substring(2,16);
 }
 
 function loginUser(){
@@ -19,6 +24,9 @@ function loginUser(){
         for (let element of users){
             if((element.email == email.value) && (element.senha == password.value)){
                 found = true;
+                const token = generateToken();
+                activeTokens[token] = element.email;  
+                console.log(activeTokens);
                 break;
             }
             else{

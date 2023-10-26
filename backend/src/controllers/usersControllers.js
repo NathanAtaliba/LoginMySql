@@ -111,4 +111,5 @@ function verificaEmail(newEmail){
   return regex.test(newEmail);
 }
 
+
 export {getUsers, updateUser, deleteUser, createUser, searchUser, verificaEmail}
