@@ -40,8 +40,16 @@
     create database if not exists dbusers;
     
     create table users(
-    email varchar(255),
-    senha varchar(255)
+        email varchar(255),
+        senha varchar(255)
+    );
+
+    create table products(
+	    id int auto_increment primary key,
+	    name varchar(255),
+	    descr varchar(255),
+	    valueProduct int, 
+	    img LONGBLOB
     );
 
     
