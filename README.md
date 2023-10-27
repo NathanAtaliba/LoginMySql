@@ -33,7 +33,7 @@
     - [x] Ao se logar na conta, é gerado um token guardado como cookie na pagina que dura por 1 dia. 
     - [x] O email da pessoa é salvo no localStorage da pagina para ser usado em outras paginas. 
 ### CRUD:
-    - O usuario pode tambem excluir sua conta do banco de dados ao se logar - 🚧
+    - O usuario pode ter a opção de excluir sua conta do banco de dados ao se logar - 🚧
     - O usuario pode trocar sua senha ao se esquecer dela - 🚧
 
 ## Comandos necessarios no banco de dados:

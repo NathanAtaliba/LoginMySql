@@ -47,7 +47,7 @@ function loginUser(){
                 const token = generateToken();
                 activeTokens[token] = element.email;  
                 setCookie("auth_token", token, 1); // terceiro argumento e o numero de dias
-                localStorage.setItem("email",email.value)
+                localStorage.setItem("email", email.value)
                 break;
             }
             else{
