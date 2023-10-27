@@ -7,6 +7,26 @@ function reset(){
     password.value = '';
 }
 
+// Função para criar um cookie com um token
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires;
+}
+
+// Função para ler um cookie
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.indexOf(name + "=") === 0) {
+            return cookie.substring(name.length + 1, cookie.length);
+        }
+    }
+    return "";
+}
+
 function generateToken(){
     return Math.random().toString(36).substring(2,16);
 }
@@ -26,7 +46,8 @@ function loginUser(){
                 found = true;
                 const token = generateToken();
                 activeTokens[token] = element.email;  
-                console.log(activeTokens);
+                setCookie("auth_token", token, 1); // terceiro argumento e o numero de dias
+                localStorage.setItem("email",email.value)
                 break;
             }
             else{
@@ -36,7 +57,7 @@ function loginUser(){
         reset();
         if(found == true){
             alert('User found!');
-            window.location.assign('../logado.html');
+            window.location.assign('./logado.html');
         }else{
             alert('User not found!');
         }

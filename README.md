@@ -27,10 +27,14 @@
 ````npm test````
 
 ## Objetivos:
-    - Criar usuarios com email e senha.
-    - Buscar todos usuarios.
-    - Deletar usuarios com email especifico.
-    - Atualizar a senha de algum usuario especifico.
+### Autenticação:
+    - [x] O usuario pode criar uma conta e se logar nela. 
+    - [x] Ao criar a conta o usuario é cadastrado no banco de dados. 
+    - [x] Ao se logar na conta, é gerado um token guardado como cookie na pagina que dura por 1 dia. 
+    - [x] O email da pessoa é salvo no localStorage da pagina para ser usado em outras paginas. 
+### CRUD:
+    - O usuario pode tambem excluir sua conta do banco de dados ao se logar - 🚧
+    - O usuario pode trocar sua senha ao se esquecer dela - 🚧
 
 ## Comandos necessarios no banco de dados:
     create database if not exists dbusers;
