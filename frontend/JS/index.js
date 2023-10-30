@@ -59,7 +59,7 @@ function loginUser(){
             alert('User found!');
             window.location.assign('./logado.html');
         }else{
-            alert('User not found!');
+            alert('Incorrect username or password');
         }
     })
     .catch((error) => {

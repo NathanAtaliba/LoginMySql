@@ -5,12 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon backend/src/index.js",
+    "server": "nodemon backend/src/index.js",
     "test": "mocha backend/test"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "chai": "^4.3.10",
     "chai-http": "^4.4.0",
     "cors": "^2.8.5",
