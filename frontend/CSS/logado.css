@@ -10,74 +10,123 @@
     text-align: center;
     flex-direction: row;
     justify-content: center;
-    color: #0053ee;
+    color: white;
+    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
 }
-.textoIcon{
-    font-size: 2rem;
-    margin: 20px 30px;
-}
-.textoUser{
+
+.iconsDetails{
+    margin-right: 0;
     display: flex;
-    text-align: center;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
 }
-.texto{
+
+.iconUser{
     font-size: 2rem;
-    margin: 20px 30px;
+    margin:20px 30px;
+    color: white;
 }
+
+.iconUser:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.iconLogout{
+    font-size: 2rem;
+    margin:20px 30px;
+}
+
+.iconLogout:hover{
+    color: black;
+    cursor: pointer;
+}
+
 .home{
     font-size: 2rem;
     margin: 20px 50px;
 }
+
 .home:hover{
     cursor: pointer;
-    color: #ff7bbf;
+    color: black;
 }
+
 .products{
     font-size: 2rem;
     margin: 20px 40px; 
 }
+
 .products:hover{
     cursor: pointer;
-    color: #ff7bbf;
+    color: black;
 }
+
 .shopping_cart{
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 20px 50px;
 }
+
 .shopping_cart:hover{
     cursor: pointer;
-    color: #ff7bbf;
+    color: black;
 }
+
 .search{
     font-size: 1.8rem;
-    border: 2px solid #0053ee;
+    border: 2px solid black;
     border-radius: 10px;
 
 }
+
 .searchBar{
     font-size: 1.8rem;
     margin: 20px 50px;
 }
+
 .searchBar:hover{
     cursor: pointer;
-    color: #ff7bbf; 
+    color: black; 
 }
 
 .list{
-    width: 100%;
+    width: 80%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    position: absolute;
+    right: 0;
     flex-direction: column;
-    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
+    background-image: white;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .list_products{
     height: 100px;
     width: 400px;
-    background-color: white;
+    background-color: black;
     justify-content: center;
+}
+
+.barSide{
+    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
+    margin: 0;
+    width: 20%;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border: none;
+}
+.filter{
+    margin: 20px;
+}
+
+input[type=radio]{
+    border: 0px;
+    width: 25px;
+    height: 30px;
+    vertical-align: middle;
 }

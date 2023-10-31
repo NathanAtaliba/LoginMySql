@@ -7,25 +7,53 @@
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
     <title>Online_Store</title>
 </head>
-<body>
+<header>
     <div class="menu">
-        <div class="textoUser">
-            <h1 class="textoIcon" id="textoIcon"><i class="fa-solid fa-user fa-beat"></i> </h1>
-            <h1 class="texto" id="texto"></h1>
-        </div>
-        <h1 class="home"><i class="fa-solid fa-house"> Home </i></h1>
-        <h1 class="products"><i class="fa-solid fa-bars"> Products </i></h1>
-        <h1 class="shopping_cart"><i class="fa-solid fa-cart-shopping"> Shopping Cart </i></h1>
         <div class="searchBar">
             <input type="search" class="search" name="search" id="search"> 
             <i class="fa-solid fa-magnifying-glass" id="iconSearch"></i></input>
         </div>
+        <h1 class="home"><i class="fa-solid fa-house"></i> Home</h1>
+        <h1 class="products"><i class="fa-solid fa-bars"></i> Products</h1>
+        <h1 class="shopping_cart"><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h1>
+        <div class="iconsDetails">
+            <h1 class="iconUser" id="iconUser"><i class="fa-solid fa-user"></i> </h1>
+            <h1 class="iconLogout" id="iconLogout"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></h1>
+        </div>
        </div>
+</header>
+<body>
     <div class="list">        
         <table class="list_products">
             <h1 class="title"> Lista de Produtos: </h1>
         </table>
     </div>
 </body>
+<aside>
+    <div class="barSide">
+        <div class="filter">
+            <h1>Category</h1>
+            <p><input type="radio" name="category" id="category1"> All</p>
+            <p><input type="radio" name="category" id="category2"> Flats</p>
+            <p><input type="radio" name="category" id="category3"> Sneakers</p>
+            <p><input type="radio" name="category" id="category4"> Sandals</p>
+            <br>
+            <h1>Price</h1>
+            <p><input type="radio" name="price" id="Price1"> All</p>
+            <p><input type="radio" name="price" id="Price2"> 0$-100$</p>
+            <p><input type="radio" name="price" id="Price3"> 100$-150$</p>
+            <p><input type="radio" name="price" id="Price4"> 150$-200$</p>
+            <p><input type="radio" name="price" id="Price5"> 200$-250$</p>
+            <br>
+            <h1>Colors</h1>
+            <p><input type="radio" name="colors" id="color1"> All</p>
+            <p><input type="radio" name="colors" id="color2"> Black</p>
+            <p><input type="radio" name="colors" id="color3"> Blue</p>
+            <p><input type="radio" name="colors" id="color4"> Red</p>
+            <p><input type="radio" name="colors" id="color5"> Green</p>
+            <p><input type="radio" name="colors" id="color6"> White</p>
+    </div>
+</div>
+</aside>
 <script src="JS/logado.js"></script>
 </html>
