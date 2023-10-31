@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 .container{
-    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);;
+    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
     width: 100%;
     height: 100vh;
     align-content: center;
