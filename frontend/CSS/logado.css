@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 .menu{
@@ -13,7 +13,7 @@
     color: #0053ee;
 }
 .textoIcon{
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin: 20px 30px;
 }
 .textoUser{
@@ -23,11 +23,11 @@
     justify-content: center
 }
 .texto{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 20px 30px;
 }
 .home{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 20px 50px;
 }
 .home:hover{
@@ -35,55 +35,49 @@
     color: #ff7bbf;
 }
 .products{
-    font-size: 2.5rem;
-    margin: 20px 50px; 
+    font-size: 2rem;
+    margin: 20px 40px; 
 }
 .products:hover{
     cursor: pointer;
     color: #ff7bbf;
 }
 .shopping_cart{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 20px 50px;
 }
 .shopping_cart:hover{
     cursor: pointer;
     color: #ff7bbf;
 }
+.search{
+    font-size: 1.8rem;
+    border: 2px solid #0053ee;
+    border-radius: 10px;
+
+}
+.searchBar{
+    font-size: 1.8rem;
+    margin: 20px 50px;
+}
+.searchBar:hover{
+    cursor: pointer;
+    color: #ff7bbf; 
+}
+
 .list{
-    display: flex;
     width: 100%;
     height: 100vh;
-    text-align: center;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
-    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);;
-}
-
-.search{
-    margin: 20px 20px;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 3rem;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px 10px;
-    width: 700px;
-    height: 70px;
-    border: #0053ee;
-    color: #0053ee;
-}
-
-#iconSearch{
-    margin: 20px 20px;
-    font-size: 3rem;
+    flex-direction: column;
+    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
+    color: white;
 }
 
 .list_products{
     height: 100px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+    width: 400px;
+    background-color: white;
     justify-content: center;
-    background-color: black;
 }
