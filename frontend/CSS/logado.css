@@ -21,27 +21,59 @@
     justify-content: center;
 }
 .userMenu{
-    background-color: white;
-    height: 200px;
+    background-color:#0053ee;
+    height: 180px;
     width: 250px;
-    color: black;
+    color: white;
     position: absolute;
     right: 10px;
     margin-top: 80px;
     z-index: 1;
-    font-size: 2rem;
-    border-radius: 10px;
+    font-size: 1.5rem;
+    border-radius: 30px;
     border: 1px solid black;
     padding: 30px;
     display: none;
 }
+
+.userMenu_user{
+    margin: 3px;
+}
+.userMenu_user:hover{
+    color:black;
+    cursor: pointer;
+}
+
+.userMenu_config{
+    margin: 3px;
+}
+.userMenu_config:hover{
+    color:black;
+    cursor: pointer;
+}
+
+.userMenu_deleteUser{
+    margin: 3px;
+}
+.userMenu_deleteUser:hover{
+    color:black;
+    cursor: pointer;
+}
+
+.userMenu_editUser{
+    margin: 3px;
+}
+.userMenu_editUser:hover{
+    color:black;
+    cursor: pointer;
+}
+
 
 .iconUser{
     font-size: 2rem;
     margin:20px 150px;
     color: white;
 }
-
 .iconUser:hover{
     color: black;
     cursor: pointer;
@@ -113,18 +145,62 @@
     flex-direction: column;
     background-image: white;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .list_products{
+    color: black;
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    border-radius: 30px;
+    border-collapse: separate;
+    border-spacing: 30px;
+    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
+}
+
+.buttons_selection{
+    display: flex;
+    background-color: #0053ee;
+    width: 100%;
     height: 100px;
-    width: 400px;
-    background-color: black;
+    text-align: center;
+    flex-direction: row;
     justify-content: center;
 }
 
+.tabela{
+    border-collapse: separate; 
+    border-spacing: 30px;
+}
+
+.title{
+    font-size: 4rem;
+    color: white;
+    margin: 30px;
+}
+
+tr, td{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    font-size: 2rem;
+    background-color: white;
+    color: #0053ee;
+    border-radius: 30px;
+    border: 1px solid #0053ee;    
+}
+td{
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+
 .barSide{
-    background-image: radial-gradient(circle at 50% 50%, #ff8fb1 0, #ff85b8 8.33%, #ff7bbf 16.67%, #fe70c5 25%, #ed66cc 33.33%, #d85dd2 41.67%, #be55d8 50%, #9e50de 58.33%, #754fe4 66.67%, #3250e9 75%, #0053ee 83.33%, #0055f0 91.67%, #0057f1 100%);
+    background-color: black;
     margin: 0;
     width: 20%;
     height: 100vh;
@@ -135,6 +211,7 @@
     left: 0;
     border: none;
 }
+
 .filter{
     margin: 20px;
 }
@@ -144,4 +221,44 @@ input[type=radio]{
     width: 25px;
     height: 30px;
     vertical-align: middle;
+}
+
+.filter_category{
+    margin: 30px;
+    margin-bottom: 100px;
+}
+.filter_price{
+    margin: 30px;
+    margin-bottom: 100px;
+}
+.filter_colors{
+    margin: 30px;
+    margin-bottom: 100px;
+}
+
+.left{
+    background-color:#0053ee;
+    font-size: 5rem;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+.left:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.right{
+    border: none;
+    background-color:#0053ee;
+    font-size: 5rem;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.right:hover{
+    color: black;
+    cursor: pointer;
 }

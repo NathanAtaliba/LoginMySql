@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +8,101 @@
     <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.css">
     <title>Online_Store</title>
 </head>
+
 <header>
     <div class="menu">
+        
         <div class="searchBar">
             <input type="search" class="search" name="search" id="search"> 
             <i class="fa-solid fa-magnifying-glass" id="iconSearch"></i></input>
         </div>
+        
         <h1 class="home"><i class="fa-solid fa-house"></i> Home</h1>
+        
         <h1 class="products"><i class="fa-solid fa-bars"></i> Products</h1>
+        
         <h1 class="shopping_cart"><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h1>
+        
         <div class="iconsDetails">
             <h1 class="iconUser" id="iconUser" onclick="displayUser()"><i class="fa-solid fa-user"></i></h1>
             <h1 class="iconLogout" id="iconLogout"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></h1>
         </div>
+        
         <div class="userMenu" id="userMenu">
-            <p class= "user">User <i class="fa-solid fa-user-secret"></i></p>
-            <p class = "config" >Config <i class="fa-solid fa-gears"></i></p>
-            <p class= "deleteUser">Delete User <i class="fa-solid fa-trash"></i></p>
-            <p class= "editUser">Edit User <i class="fa-solid fa-user-pen"></i></p>
+            <p class= "userMenu_user">User <i class="fa-solid fa-user-secret"></i></p>
+            <p class = "userMenu_config" >Config <i class="fa-solid fa-gears"></i></p>
+            <p class= "userMenu_deleteUser">Delete User <i class="fa-solid fa-trash"></i></p>
+            <p class= "userMenu_editUser">Edit User <i class="fa-solid fa-user-pen"></i></p>
         </div>
-       </div>
+       
+    </div>
 </header>
+
 <body>
-    <div class="list">        
-        <table class="list_products">
-            <h1 class="title"> Lista de Produtos: </h1>
-        </table>
+    <div class="list">
+        <div class="list_products">        
+            <table class="tabela">
+                <h1 class="title"> Lista de Produtos: </h1>
+                <tr>
+                    <td>  
+                        <p>img:</p>
+                        <p>preco:</p>
+                        <p>color:</p>
+                        <p> </p>
+                    </td>
+                    <td> Produto 2 </td>
+                    <td> Produto 3</td>
+                    <td> Produto 4</td>
+                </tr>
+
+                <tr>
+                    <td> Produto 5 </td>
+                    <td> Produto 6 </td>
+                    <td> Produto 7</td>
+                    <td> Produto 8</td>
+                </tr>
+
+            </table>
+
+            <div class="buttons_selection">
+                <button class="left"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="right"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
     </div>
 </body>
+
 <aside>
     <div class="barSide">
         <div class="filter">
-            <h1>Category</h1>
-            <p><input type="radio" name="category" id="category1"> All</p>
-            <p><input type="radio" name="category" id="category2"> Flats</p>
-            <p><input type="radio" name="category" id="category3"> Sneakers</p>
-            <p><input type="radio" name="category" id="category4"> Sandals</p>
-            <br>
-            <h1>Price</h1>
-            <p><input type="radio" name="price" id="Price1"> All</p>
-            <p><input type="radio" name="price" id="Price2"> 0$-100$</p>
-            <p><input type="radio" name="price" id="Price3"> 100$-150$</p>
-            <p><input type="radio" name="price" id="Price4"> 150$-200$</p>
-            <p><input type="radio" name="price" id="Price5"> 200$-250$</p>
-            <br>
-            <h1>Colors</h1>
-            <p><input type="radio" name="colors" id="color1"> All</p>
-            <p><input type="radio" name="colors" id="color2"> Black</p>
-            <p><input type="radio" name="colors" id="color3"> Blue</p>
-            <p><input type="radio" name="colors" id="color4"> Red</p>
-            <p><input type="radio" name="colors" id="color5"> Green</p>
-            <p><input type="radio" name="colors" id="color6"> White</p>
+            <div class="filter_category">
+                <h1>Category</h1>
+                <p><input type="radio" name="category" id="category1"> All</p>
+                <p><input type="radio" name="category" id="category2"> Flats</p>
+                <p><input type="radio" name="category" id="category3"> Sneakers</p>
+                <p><input type="radio" name="category" id="category4"> Sandals</p>
+            </div>
+
+            <div class="filter_price">
+                <h1>Price</h1>
+                <p><input type="radio" name="price" id="Price1"> All</p>
+                <p><input type="radio" name="price" id="Price2"> 0$-100$</p>
+                <p><input type="radio" name="price" id="Price3"> 100$-150$</p>
+                <p><input type="radio" name="price" id="Price4"> 150$-200$</p>
+                <p><input type="radio" name="price" id="Price5"> 200$-250$</p>
+            </div>
+            
+            <div class="filter_colors">
+                <h1>Colors</h1>
+                <p><input type="radio" name="colors" id="color1"> All</p>
+                <p><input type="radio" name="colors" id="color2"> Black</p>
+                <p><input type="radio" name="colors" id="color3"> Blue</p>
+                <p><input type="radio" name="colors" id="color4"> Red</p>
+                <p><input type="radio" name="colors" id="color5"> Green</p>
+                <p><input type="radio" name="colors" id="color6"> White</p>
+            </div>
+        </div>
     </div>
-</div>
 </aside>
 <script src="JS/logado.js"></script>
 </html>
