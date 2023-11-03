@@ -45,11 +45,12 @@
     );
 
     create table products(
-	    id int auto_increment primary key,
-	    name varchar(255),
-	    descr varchar(255),
-	    valueProduct int, 
-	    img LONGBLOB
+        id int auto_increment primary key,
+        name varchar(255),
+        descr varchar(255),
+        color varchar(255),
+        price int, 
+        img LONGBLOB
     );
 
     
