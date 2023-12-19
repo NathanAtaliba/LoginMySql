@@ -51,7 +51,7 @@ function loginUser(){
                 'Content-Type': 'application/json'
               }
         })
-        .then(async (results)=> {
+        .then(async (results)=>  {
             const users = await results.json();
             let found = false;
             for (let element of users){

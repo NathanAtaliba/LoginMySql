@@ -1,6 +1,3 @@
-const email = localStorage.getItem('email');
-document.getElementById('texto').textContent = email;
-
 function displayUser(){
     let display = document.getElementById("userMenu");
     let icon = document.getElementById("iconUser");
@@ -13,3 +10,26 @@ function displayUser(){
         icon.style.color = "black";
     }
 }
+
+inicializarLoja = () =>{
+    var containerProdutos = document.getElementById('tabelaProdutos');
+    fetch('http://localhost:3000/products',{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+          }
+    })
+    .then(async (results)=>  {
+        const products = await results.json();
+        for(var i=0; i < products.length; i++){
+            containerProdutos.innerHTML += `
+            <div class= 'produtos'>
+                <img class ='imgs' src="`+ products[i].img +`"/>
+                <p>`+ products[i].name +`</p>
+                <a key="`+ products[i].id +`" href=""> Adicionar ao carrinho! </a>
+            `;
+        }
+})
+}
+
+inicializarLoja();
