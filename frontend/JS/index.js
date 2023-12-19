@@ -1,5 +1,6 @@
 let email = document.getElementById("email");
 let password = document.getElementById("password");
+
 let activeTokens = {};
 
 function reset(){
@@ -31,41 +32,54 @@ function generateToken(){
     return Math.random().toString(36).substring(2,16);
 }
 
+async function mensagem(title, text, icon){
+	return Swal.fire({
+		title: title,
+		text: text,
+		icon: icon,
+		confirmButtonText: 'Ok'
+	});
+}
+
 function loginUser(){
-    fetch('http://localhost:3000/users',{
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-          }
-    })
-    .then(async (results)=> {
-        const users = await results.json();
-        let found = false;
-        for (let element of users){
-            if((element.email == email.value) && (element.senha == password.value)){
-                found = true;
-                const token = generateToken();
-                activeTokens[token] = element.email;  
-                setCookie("auth_token", token, 1); // terceiro argumento e o numero de dias
-                localStorage.setItem("email", email.value)
-                break;
+    if(email.value == '' || password.value == ''){
+        mensagem('Email e senha não preenchidos!', 'Preencha os campos!', 'warning')
+    }else{
+        fetch('http://localhost:3000/users',{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        })
+        .then(async (results)=> {
+            const users = await results.json();
+            let found = false;
+            for (let element of users){
+                if((element.email == email.value) && (element.senha == password.value)){
+                    found = true;
+                    const token = generateToken();
+                    activeTokens[token] = element.email;  
+                    setCookie("auth_token", token, 1); // terceiro argumento e o numero de dias
+                    localStorage.setItem("email", email.value)
+                    break;
+                }
+                else{
+                    found = false;
+                }
             }
-            else{
-                found = false;
+            reset();
+            if(found == true){
+               await mensagem('Usuario encontrado', 'Voce sera direcionado para pagina de compras!', 'success')
+               window.location.assign('./logado.html');
+            }else{
+                mensagem('Usuario não encontrado', 'Entre novamente com seus dados', 'warning')
             }
-        }
-        reset();
-        if(found == true){
-            alert('User found!');
-            window.location.assign('./logado.html');
-        }else{
-            alert('Incorrect username or password');
-        }
-    })
-    .catch((error) => {
-        console.error('Erro na solicitação:', error.message);
-        reset();
-    });
+        })
+        .catch((error) => {
+            console.error('Erro na solicitação:', error.message);
+            reset();
+        });
+    }    
 }
 
 function createUser(){
