@@ -49,9 +49,13 @@
         name varchar(255),
         descr varchar(255),
         color varchar(255),
-        price int, 
-        img LONGBLOB
+	    price int, 
+        img varchar(255)
     );
+
+### Exemplo de insert de um produto:
+    INSERT INTO products (id, name, descr, color, price, img) VALUES(1, 'camisa personalizada', 'camisa de time', 'blue', 20, '\\shirts\\212.jpg');
+
 
     
     
