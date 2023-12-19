@@ -49,8 +49,10 @@
         name varchar(255),
         descr varchar(255),
         color varchar(255),
+        category varchar(255),
 	    price int, 
         img varchar(255)
+        
     );
 
 ### Exemplo de insert de um produto:
