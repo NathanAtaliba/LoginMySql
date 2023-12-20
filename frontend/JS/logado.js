@@ -1,4 +1,11 @@
-let itens = []
+async function mensagem(title, text, icon){
+	return Swal.fire({
+		title: title,
+		text: text,
+		icon: icon,
+		confirmButtonText: 'Ok'
+	});
+}
 
 function adicionaNoCarrinho(productId){
     fetch('http://localhost:3000/products',{
@@ -13,12 +20,22 @@ function adicionaNoCarrinho(productId){
 
         if (produtoSelecionado) {
             let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-            carrinho.push(produtoSelecionado);
-
-            localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-            console.log('Produto adicionado ao carrinho:', carrinho);
+            let encontrado = 0 ;
+            for(var i=0; i<carrinho.length; i++){
+                if(produtoSelecionado.id === carrinho[i].id){
+                    encontrado = 1;
+                    break;
+                }
+            }
+            if(encontrado == 1){
+                mensagem('Produto ja adicionado ao carrinho', 'Selecione outro', 'warning');
+            }
+            else{
+                mensagem('Produto adicionado ao carrinho', '', 'success');
+                carrinho.push(produtoSelecionado);
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+                console.log('Produto adicionado ao carrinho:', carrinho);
+            }
 
         } else {
             console.log('Produto não encontrado');
@@ -33,14 +50,11 @@ function listarCarrinho(){
 
 function removerDoCarrinho(productId){
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
     const index = carrinho.findIndex(item => item.id === productId);
 
     if (index !== -1) {
         carrinho.splice(index, 1);
-
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
         console.log('Produto removido do carrinho:', carrinho);
     } else {
         console.log('Produto não encontrado no carrinho');
