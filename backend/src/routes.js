@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getUsers, createUser, updateUser, deleteUser, searchUser } from "./controllers/usersControllers.js";
-import { getProducts } from "./controllers/productsControllers.js"
+import { getProducts, getproductsfilter } from "./controllers/productsControllers.js"
 const routes =  Router();
 
 //ROTAS PARA USUARIO
@@ -16,6 +16,8 @@ routes.delete('/users/:email', deleteUser)
 
 //ROTAS PARA PRODUTOS
 routes.get('/products', getProducts)
+
+routes.post('/products', getproductsfilter)
 export default routes;
 
 

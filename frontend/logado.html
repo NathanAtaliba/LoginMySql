@@ -58,30 +58,31 @@
         <div class="filter">
             <div class="filter_category">
                 <h1>Category</h1>
-                <p><input type="radio" name="category" id="category1"> All</p>
-                <p><input type="radio" name="category" id="category2"> Flats</p>
-                <p><input type="radio" name="category" id="category3"> Sneakers</p>
-                <p><input type="radio" name="category" id="category4"> Sandals</p>
-                <p><input type="radio" name="category" id="category4"> Shirts</p>
+                <p><input type="radio" name="category" id="category1" value="all" onchange="filterProducts()"> All</p>
+                <p><input type="radio" name="category" id="category2" value="flats" onchange="filterProducts()"> Flats</p>
+                <p><input type="radio" name="category" id="category3" value="sneakers" onchange="filterProducts()"> Sneakers</p>
+                <p><input type="radio" name="category" id="category4" value="sandals" onchange="filterProducts()"> Sandals</p>
+                <p><input type="radio" name="category" id="category4" value="shirts" onchange="filterProducts()"> Shirts</p>
             </div>
 
             <div class="filter_price">
                 <h1>Price</h1>
-                <p><input type="radio" name="price" id="Price1"> All</p>
-                <p><input type="radio" name="price" id="Price2"> 0$-100$</p>
-                <p><input type="radio" name="price" id="Price3"> 100$-150$</p>
-                <p><input type="radio" name="price" id="Price4"> 150$-200$</p>
-                <p><input type="radio" name="price" id="Price5"> 200$-250$</p>
+                <p><input type="radio" name="prices" id="Price1" onchange="filterProducts()" value="all"> All</p>
+                <p><input type="radio" name="prices" id="Price2" onchange="filterProducts()" value="0 a 100"> 0$-100$</p>
+                <p><input type="radio" name="prices" id="Price3" onchange="filterProducts()" value="100 a 150"> 100$-150$</p>
+                <p><input type="radio" name="prices" id="Price4" onchange="filterProducts()" value="150 a 200"> 150$-200$</p>
+                <p><input type="radio" name="prices" id="Price5" onchange="filterProducts()" value="200 a 250"> 200$-250$</p>
+                <p><input type="radio" name="prices" id="Price5" onchange="filterProducts()" value="250++"> 250$++</p>
             </div>
             
             <div class="filter_colors">
                 <h1>Colors</h1>
-                <p><input type="radio" name="colors" id="color1"> All</p>
-                <p><input type="radio" name="colors" id="color2"> Black</p>
-                <p><input type="radio" name="colors" id="color3"> Blue</p>
-                <p><input type="radio" name="colors" id="color4"> Red</p>
-                <p><input type="radio" name="colors" id="color5"> Green</p>
-                <p><input type="radio" name="colors" id="color6"> White</p>
+                <p><input type="radio" name="colors" id="color2" value="all" onchange="filterProducts()"> All</p>
+                <p><input type="radio" name="colors" id="color2" value="black" onchange="filterProducts()"> Black</p>
+                <p><input type="radio" name="colors" id="color3" value="blue" onchange="filterProducts()"> Blue</p>
+                <p><input type="radio" name="colors" id="color4" value="red" onchange="filterProducts()"> Red</p>
+                <p><input type="radio" name="colors" id="color5" value="green" onchange="filterProducts()"> Green</p>
+                <p><input type="radio" name="colors" id="color6" value="white"onchange="filterProducts()"> White</p>
             </div>
         </div>
     </div>

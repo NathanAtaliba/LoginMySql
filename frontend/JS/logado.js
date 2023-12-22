@@ -1,3 +1,90 @@
+function filterProducts() {
+    let selectedCategory;
+    const categoryRadios = document.getElementsByName('category');
+    for (const category of categoryRadios) {
+        if (category.checked) {
+            selectedCategory = category.value;
+            break;
+        }
+    }
+
+    let selectedColor;
+    const colorRadios = document.getElementsByName('colors');
+    for (const color of colorRadios) {
+        if (color.checked) {
+            selectedColor = color.value;
+            break;
+        }
+    }
+
+    let selectedPrice;
+    const priceRadios = document.getElementsByName('prices');
+    for (const price of priceRadios) {
+        if (price.checked) {
+            selectedPrice = price.value;
+            break;
+        }
+    }
+
+    // Construct your query based on selectedCategory, selectedColor, and selectedPrice
+    let query = 'SELECT * FROM products WHERE ';
+    let conditions = [];
+
+    if (selectedCategory && selectedCategory !== 'all') {
+        conditions.push(`category = '${selectedCategory}'`);
+    }
+
+    if (selectedColor && selectedColor !== 'all') {
+        conditions.push(`color = '${selectedColor}'`);
+    }
+
+    if (selectedPrice && selectedPrice !== 'all') {
+        if(selectedPrice == '0 a 100'){
+            conditions.push(`price BETWEEN 0 AND 100`);
+        }
+        else if(selectedPrice == '100 a 150'){
+            conditions.push(`price BETWEEN 100 AND 150`);
+        }
+        else if(selectedPrice == '150 a 200'){
+            conditions.push(`price BETWEEN 150 AND 200`);
+        }
+        else if(selectedPrice == '200 a 250'){
+            conditions.push(`price BETWEEN 200 AND 250`);
+        }
+        else{
+            conditions.push(`price > 250`);
+        }
+    }
+
+    if (conditions.length > 0) {
+        query += conditions.join(' AND ');
+    } else {
+        query += '1'; // A placeholder condition to retrieve all products if no specific filters are selected
+    }
+    fetch('http://localhost:3000/products',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify({ query: query })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json(); // Parse a resposta JSON, se houver
+    })
+    .then(data => {
+        // Aqui você pode lidar com os dados retornados após a execução da query
+        console.log(data);
+    })
+    .catch(error => {
+        // Lidar com erros durante a solicitação
+        console.error('Fetch error:', error);
+    });
+}
+
+
 async function mensagem(title, text, icon){
 	return Swal.fire({
 		title: title,
