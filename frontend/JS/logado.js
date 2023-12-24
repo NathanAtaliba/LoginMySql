@@ -163,24 +163,6 @@ function displayUser(){
     }
 }
 
-inicializarLoja = async () =>{
-    var containerProdutos = document.getElementById('tabelaProdutos');
-    try {
-        var products = await filterProducts();
-        for (var i = 0; i < products.length; i++) {
-            containerProdutos.innerHTML += `
-            <div class= 'produtos'>
-                <img class ='imgs' src="${products[i].img}"/>
-                <p>${products[i].name}</p>
-                <a key="${products[i].id}" href=""> Adicionar ao carrinho! </a>
-            `;
-        }
-    } catch (error) {
-        // Lidar com erros durante a execução de filterProducts
-        console.error('Error in filterProducts:', error);
-    }
-}
-
 inicializarLoja = async () => {
     var containerProdutos = document.getElementById('tabelaProdutos');
     
