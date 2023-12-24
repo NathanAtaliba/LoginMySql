@@ -36,7 +36,7 @@ return new Promise((resolve, reject)=>{
     }
 
     if (selectedColor && selectedColor !== 'all') {
-        conditions.push(`color = '${selectedColor}'`);
+        conditions.push(`color1 = '${selectedColor}'`);
     }
 
     if (selectedPrice && selectedPrice !== 'all') {

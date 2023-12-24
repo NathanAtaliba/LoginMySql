@@ -48,7 +48,8 @@
         id int auto_increment primary key,
         name varchar(255),
         gender varchar(255),
-        color varchar(255),
+        color1 varchar(255),
+        color2 varchar(255),
         category varchar(255),
 	    price int, 
         img varchar(255)
@@ -58,19 +59,19 @@
 
 #### Adidas:
 
-    INSERT INTO products (id, name, brand, gender ,color, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'sneakers' ,250, '\\Adidas\\Sneakers\\White\\AdidasWhiteSneakers.jpg');
+    INSERT INTO products (id, name, brand, gender ,color1, color2, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'black', 'sneakers' ,250, '\\Adidas\\Sneakers\\AdidasWhiteSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'sneakers' , 200, '\\Adidas\\Sneakers\\Blue\\AdidasBlueSneakers.jpg');
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlueSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'sneakers' , 200, '\\Adidas\\Sneakers\\Black\\AdidasBlackSneakers.jpg');
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlackSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Courtflash Speed','adidas', 'M' ,'red', 'sneakers' , 400, '\\Adidas\\Sneakers\\Black\\TênisAdidasCourtflashSpeed.jpg');
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Courtflash Speed','adidas', 'M' ,'red', 'sneakers' , 400, '\\Adidas\\Sneakers\\TênisAdidasCourtflashSpeed.jpg');
 
-     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'TTênis Adidas Advantage','adidas', 'F' ,'green', 'sneakers' , 200, '\\Adidas\\Sneakers\\Black\\TênisAdidasAdvantage.jpg');
-     
+     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'TTênis Adidas Advantage','adidas', 'F' ,'green', 'sneakers' , 200, '\\Adidas\\Sneakers\\TênisAdidasAdvantage.jpg');
+
 #### Nike:
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Nike Downshifter 12','nike', 'M' ,'green', 'sneakers' , 300, '\\Nike\\Sneakers\\Green\\TênisNikeDownshifter12.jpg');
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Nike Downshifter 12','nike', 'M' ,'green', 'sneakers' , 300, '\\Nike\\Sneakers\\TênisNikeDownshifter12.jpg');
 
     
     
