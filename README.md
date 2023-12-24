@@ -47,7 +47,7 @@
     create table products(
         id int auto_increment primary key,
         name varchar(255),
-        descr varchar(255),
+        gender varchar(255),
         color varchar(255),
         category varchar(255),
 	    price int, 
