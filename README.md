@@ -55,12 +55,22 @@
     );
 
 ### Exemplo de insert de um produto:
+
+#### Adidas:
+
     INSERT INTO products (id, name, brand, gender ,color, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'sneakers' ,250, '\\Adidas\\Sneakers\\White\\AdidasWhiteSneakers.jpg');
 
     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'sneakers' , 200, '\\Adidas\\Sneakers\\Blue\\AdidasBlueSneakers.jpg');
 
     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'sneakers' , 200, '\\Adidas\\Sneakers\\Black\\AdidasBlackSneakers.jpg');
 
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Courtflash Speed','adidas', 'M' ,'red', 'sneakers' , 400, '\\Adidas\\Sneakers\\Black\\TênisAdidasCourtflashSpeed.jpg');
+
+     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'TTênis Adidas Advantage','adidas', 'F' ,'green', 'sneakers' , 200, '\\Adidas\\Sneakers\\Black\\TênisAdidasAdvantage.jpg');
+     
+#### Nike:
+
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Nike Downshifter 12','nike', 'M' ,'green', 'sneakers' , 300, '\\Nike\\Sneakers\\Green\\TênisNikeDownshifter12.jpg');
 
     
     
