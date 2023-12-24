@@ -55,7 +55,11 @@
     );
 
 ### Exemplo de insert de um produto:
-    INSERT INTO products (id, name, descr, color, category, price, img) VALUES(1, 'camisa personalizada 1','camisa de time', 'blue', 'shirts' ,20, '\\shirts\\CamisaAzul1.jpg');
+    INSERT INTO products (id, name, brand, gender ,color, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'sneakers' ,250, '\\Adidas\\Sneakers\\White\\AdidasWhiteSneakers.jpg');
+
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'sneakers' , 200, '\\Adidas\\Sneakers\\Blue\\AdidasBlueSneakers.jpg');
+
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'sneakers' , 200, '\\Adidas\\Sneakers\\Black\\AdidasBlackSneakers.jpg');
 
 
     

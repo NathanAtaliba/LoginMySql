@@ -1,4 +1,5 @@
-function filterProducts() {
+async function filterProducts() {
+return new Promise((resolve, reject)=>{ 
     let selectedCategory;
     const categoryRadios = document.getElementsByName('category');
     for (const category of categoryRadios) {
@@ -75,15 +76,16 @@ function filterProducts() {
         return response.json(); // Parse a resposta JSON, se houver
     })
     .then(data => {
-        // Aqui você pode lidar com os dados retornados após a execução da query
-        console.log(data);
+        inicializarLoja();
+        resolve(data);
     })
     .catch(error => {
         // Lidar com erros durante a solicitação
+        reject(error)
         console.error('Fetch error:', error);
     });
+})
 }
-
 
 async function mensagem(title, text, icon){
 	return Swal.fire({
@@ -161,25 +163,44 @@ function displayUser(){
     }
 }
 
-inicializarLoja = () =>{
+inicializarLoja = async () =>{
     var containerProdutos = document.getElementById('tabelaProdutos');
-    fetch('http://localhost:3000/products',{
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-          }
-    })
-    .then(async (results)=>  {
-        const products = await results.json();
-        for(var i=0; i < products.length; i++){
+    try {
+        var products = await filterProducts();
+        for (var i = 0; i < products.length; i++) {
             containerProdutos.innerHTML += `
             <div class= 'produtos'>
-                <img class ='imgs' src="`+ products[i].img +`"/>
-                <p>`+ products[i].name +`</p>
-                <a key="`+ products[i].id +`" href=""> Adicionar ao carrinho! </a>
+                <img class ='imgs' src="${products[i].img}"/>
+                <p>${products[i].name}</p>
+                <a key="${products[i].id}" href=""> Adicionar ao carrinho! </a>
             `;
         }
-})
+    } catch (error) {
+        // Lidar com erros durante a execução de filterProducts
+        console.error('Error in filterProducts:', error);
+    }
+}
+
+inicializarLoja = async () => {
+    var containerProdutos = document.getElementById('tabelaProdutos');
+    
+    // Limpar a tabela antes de adicionar novos produtos
+    containerProdutos.innerHTML = '';
+
+    try {
+        var products = await filterProducts();
+        for (var i = 0; i < products.length; i++) {
+            containerProdutos.innerHTML += `
+            <div class= 'produtos'>
+                <img class ='imgs' src="${products[i].img}"/>
+                <p>${products[i].name}</p>
+                <a key="${products[i].id}" href=""> Adicionar ao carrinho! </a>
+            `;
+        }
+    } catch (error) {
+        // Lidar com erros durante a execução de filterProducts
+        console.error('Error in filterProducts:', error);
+    }
 }
 
 inicializarLoja();
