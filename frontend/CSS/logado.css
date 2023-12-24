@@ -174,8 +174,12 @@
 }
 
 .tabelaProdutos{
-    border-collapse: separate; 
-    border-spacing: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .produtos{
