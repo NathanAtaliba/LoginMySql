@@ -50,16 +50,23 @@
     display: flex;
     padding: 10px;
 }
+
 #facebook:hover{
     color: #ff7bbf;
     cursor: pointer;
 }
+
 #instagram:hover{
     color: #ff7bbf;
     cursor: pointer;
 
 }
 #google:hover{
+    color: #ff7bbf;
+    cursor: pointer;
+}
+
+#wathszap:hover{
     color: #ff7bbf;
     cursor: pointer;
 }
