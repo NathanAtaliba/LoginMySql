@@ -59,19 +59,46 @@
 
 #### Adidas:
 
-    INSERT INTO products (id, name, brand, gender ,color1, color2, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'black', 'sneakers' ,250, '\\Adidas\\Sneakers\\AdidasWhiteSneakers.jpg');
+##### Sneakers
+    INSERT INTO products (id, name, brand, gender , color1, color2, category, price, img) VALUES(1, 'Tênis Adidas Grand Court 2.0','adidas', 'F', 'white', 'black', 'sneakers' ,250, '\\Adidas\\Sneakers\\AdidasWhiteSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlueSneakers.jpg');
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(2, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'blue', 'white', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlueSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlackSneakers.jpg');
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(3, 'Tênis Adidas Ultra Energy','adidas', 'M' ,'black', 'white', 'sneakers' , 200, '\\Adidas\\Sneakers\\AdidasBlackSneakers.jpg');
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Adidas Courtflash Speed','adidas', 'M' ,'red', 'sneakers' , 400, '\\Adidas\\Sneakers\\TênisAdidasCourtflashSpeed.jpg');
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(4, 'Tênis Adidas Courtflash Speed','adidas', 'M' ,'red', 'white', 'sneakers' , 400, '\\Adidas\\Sneakers\\TênisAdidasCourtflashSpeed.jpg');
 
-     INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'TTênis Adidas Advantage','adidas', 'F' ,'green', 'sneakers' , 200, '\\Adidas\\Sneakers\\TênisAdidasAdvantage.jpg');
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(5, 'TTênis Adidas Advantage','adidas', 'F' ,'green', 'null', 'sneakers' , 200, '\\Adidas\\Sneakers\\TênisAdidasAdvantage.jpg');
+
+##### Shirts
+    
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(6, 'Camisa Flamengo Torcedor Adidas','adidas', 'M' ,'red', 'black', 'shirts' , 250, '\\Adidas\\Shirts\\CamisaFlamengoTorcedorAdidas.jpg');
+
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(7, 'Camisa Flamengo Torcedor Adidas','adidas', 'M' ,'white', 'black', 'shirts' , 280, '\\Adidas\\Shirts\\CamisaFlamengoTorcedorAdidasWhite.jpg');
+
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(8, 'Camisa São Paulo Torcedor Adidas','adidas', 'M' ,'white', 'black', 'shirts' , 280, '\\Adidas\\Shirts\\CamisaFlamengoTorcedorAdidasWhite.jpg');
+
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(9, 'Camisa São Paulo Torcedor Adidas','adidas', 'M' ,'red', 'white', 'shirts' , 140, '\\Adidas\\Shirts\\CamisaInternacionalTorcedorAdidas.jpg');
+    
+    INSERT INTO products (id, name, brand, gender, color1, color2, category, price, img) VALUES(10, 'Camisa Real Madrid Third Torcedor Adidas','adidas', 'M' ,'black', 'white', 'shirts' , 250, '\\Adidas\\Shirts\\CamisaRealMadridThirdTorcedorAdidas.jpg');
+
+##### Sandals:
+
+##### Flats:
 
 #### Nike:
 
-    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(1, 'Tênis Nike Downshifter 12','nike', 'M' ,'green', 'sneakers' , 300, '\\Nike\\Sneakers\\TênisNikeDownshifter12.jpg');
+##### Sneakers:
+
+    INSERT INTO products (id, name, brand, gender, color, category, price, img) VALUES(11, 'Tênis Nike Downshifter 12','nike', 'M' ,'green', 'sneakers' , 300, '\\Nike\\Sneakers\\TênisNikeDownshifter12.jpg');
+
+##### Shirts:
+
+##### Sandals:
+
+##### Flats:
+
+    
 
     
     
