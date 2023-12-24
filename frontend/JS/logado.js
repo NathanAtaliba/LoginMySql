@@ -176,6 +176,7 @@ inicializarLoja = async () => {
             <div class= 'produtos'>
                 <img class ='imgs' src="${products[i].img}"/>
                 <p>${products[i].name}</p>
+                <p>R$${products[i].price}</p>
                 <a key="${products[i].id}" href=""> Adicionar ao carrinho! </a>
             `;
         }
